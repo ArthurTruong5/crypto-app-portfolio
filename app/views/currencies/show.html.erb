@@ -1,0 +1,30 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+
+    <p>
+      <strong>Symbol:</strong>
+      <%= @currency.symbol %>
+    </p>
+
+    <p>
+      <strong>Cost per:</strong>
+      <%= @currency.cost_per %>
+    </p>
+
+    <p>
+      <strong>Amount owned:</strong>
+      <%= @currency.amount_owned %>
+    </p>
+
+    <div class="panel-footer">
+
+      <%= link_to 'Back', currencies_path %>
+      |
+      <%= link_to 'Edit', edit_currency_path(@currency) %>
+      |
+      <%= link_to 'Delete', currency_path(@currency), method: :delete, data: { confirm: 'Are you sure?' } %>
+
+    </div>
+
+  </div>
+</div>
